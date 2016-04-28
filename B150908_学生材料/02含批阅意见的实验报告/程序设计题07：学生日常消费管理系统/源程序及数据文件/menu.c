@@ -1,110 +1,147 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h>
 #include"file.h"
 #include"consumption.h"
 
 void printHead( )      /*´òÓ¡Ñ§ÉúÏû·ÑĞÅÏ¢µÄ±íÍ·*/
 {
-printf("%s\t%s\t%s\t%s\t%s\t%s\t%s\t\n","ÈÕÆÚ","²ÍÒû","¹ºÎï","ÓéÀÖ","½»Í¨","·ÑÓÃ","ÏêÇé");
+	printf("%s\t        %s\t%s\t%s\t%s\t\n","ÈÕÆÚ","²ÍÒû","¹ºÎï","ÓéÀÖ","½»Í¨");
 }
 
 void menu( )         /*¶¥²ã²Ëµ¥º¯Êı*/
 {
-		printf("******** 1. ÏÔÊ¾ËùÓĞÕËµ¥ĞÅÏ¢  ********\n");
-		printf("******** 2. »ù±¾ĞÅÏ¢¹ÜÀí      ********\n");
-		printf("******** 3. Ïû·ÑĞÅÏ¢¹ÜÀí      ********\n");
-		printf("******** 4. Ïû·ÑĞÅÏ¢Í³¼Æ      ********\n");
-        printf("******** 5. ¸ù¾İÌõ¼ş²éÑ¯      ********\n");
-		printf("******** 0. ÍË³ö              ********\n");
+		printf("\n");
+	    printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
+		printf("                     $                                              $\n");
+		printf("                     |                     Ö÷²Ëµ¥                   |\n");
+		printf("                     |                                              |\n");
+		printf("                     |              1. ÏÔÊ¾ËùÓĞÕËµ¥ĞÅÏ¢             |\n");
+		printf("                     |              2. »ù±¾ĞÅÏ¢¹ÜÀí                 |\n");
+		printf("                     |              3. Ïû·ÑĞÅÏ¢¹ÜÀí                 |\n");
+		printf("                     |              4. Ïû·ÑĞÅÏ¢Í³¼Æ                 |\n");
+        printf("                     |              5. ¸ù¾İÌõ¼ş²éÑ¯                 |\n");
+		printf("                     |              0. ÍË³ö                         |\n");
+		printf("                     $                                              $\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
 }
 
 void menuBase( )     /*2¡¢»ù±¾ĞÅÏ¢¹ÜÀí²Ëµ¥º¯Êı*/
 {
-		printf("%%%%%%%% 1. Ìí¼ÓÒ»±ÊÕËµ¥ %%%%%%%%\n");
-		printf("%%%%%%%% 2. É¾³ıÒ»±ÊÕËµ¥ %%%%%%%%\n");
-		printf("%%%%%%%% 3. ĞŞ¸ÄÒ»±ÊÕËµ¥ %%%%%%%%\n");
-		printf("%%%%%%%% 0. ·µ»ØÉÏ²ã²Ëµ¥ %%%%%%%%\n");
+		printf("\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
+		printf("                     $                                              $\n");
+		printf("                     |                 »ù±¾ĞÅÏ¢¹ÜÀí                 |\n");
+		printf("                     |                                              |\n");
+		printf("                     |               1. Ìí¼ÓÒ»±ÊÕËµ¥                |\n");
+		printf("                     |               1. Ìí¼ÓÒ»±ÊÕËµ¥                |\n");
+		printf("                     |               2. É¾³ıÒ»±ÊÕËµ¥                |\n");
+		printf("                     |               3. ĞŞ¸ÄÒ»±ÊÕËµ¥                |\n");
+		printf("                     |               0. ·µ»ØÉÏ²ã²Ëµ¥                |\n");
+		printf("                     $                                              $\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
 }
 
 void menuScore( )     /*3¡¢Ïû·ÑĞÅÏ¢¹ÜÀí²Ëµ¥º¯Êı*/
 {
-		printf("@@@@@@@@ 1. ¼ÆËãÃ¿ÈÕÏû·ÑµÄ×Ü½ğ¶î @@@@@@@@\n");
-		printf("@@@@@@@@ 2. ¸ù¾İÃ¿ÈÕ½ğ¶îÅÅÃû     @@@@@@@@\n");
-		printf("@@@@@@@@ 0. ·µ»ØÉÏ²ã²Ëµ¥         @@@@@@@@\n");
+		printf("\n");
+        printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
+		printf("                     $                                              $\n");
+		printf("                     |                 Ïû·ÑĞÅÏ¢¹ÜÀí                 |\n");
+		printf("                     |                                              |\n");
+		printf("                     |             1. ¼ÆËãÃ¿ÈÕÏû·ÑµÄ×Ü¶î            |\n");
+		printf("                     |             2. ¸ù¾İÃ¿ÈÕ½ğ¶îÅÅÃû              |\n");
+		printf("                     |             0. ·µ»ØÉÏ²ã²Ëµ¥                  |\n");
+		printf("                     $                                              $\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
 }
 
 void menuCount( )    /*4¡¢Ïû·ÑĞÅÏ¢Í³¼Æ²Ëµ¥º¯Êı*/
 {
-		printf("&&&&&&&& 1. Ä³ÄêÄ³ÔÂÏû·Ñ×Ü¶î          &&&&&&&&\n");
-		printf("&&&&&&&& 2. Ä³ÄêÄ³ÔÂÏîÄ¿Ïû·Ñ±ÈÀı      &&&&&&&&\n");
-		printf("&&&&&&&& 3. Ä³ÄêÄ³ÔÂ³¬³öÔ¤Ëã½ğ¶îÌìÊı  &&&&&&&&\n");
-		printf("&&&&&&&& 0. ·µ»ØÉÏ²ã²Ëµ¥              &&&&&&&&\n");
+	    printf("\n");
+        printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
+		printf("                     $                                              $\n");
+		printf("                     |                  Ïû·ÑĞÅÏ¢Í³¼Æ                |\n");
+		printf("                     |                                              |\n");
+		printf("                     |             1. Ä³ÄêÄ³ÔÂÏû·Ñ×Ü¶î              |\n");
+		printf("                     |             2. Ä³ÄêÄ³ÔÂÏîÄ¿Ïû·Ñ±ÈÀı          |\n");
+		printf("                     |             3. Ä³ÄêÄ³ÔÂ³¬³öÔ¤Ëã½ğ¶îÌìÊı      |\n");
+		printf("                     |             0. ·µ»ØÉÏ²ã²Ëµ¥                  |\n");
+		printf("                     $                                              $\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
 }
 
 void menuSearch()    /*5¡¢¸ù¾İÌõ¼ş²éÑ¯²Ëµ¥º¯Êı*/
 {
-		printf("######## 1. °´ÈÕÆÚ£¨Äê£©²éÑ¯ÕËµ¥ÏêÇé  ########\n");
-		printf("######## 2. °´ÈÕÆÚ£¨ÔÂ£©²éÑ¯ÕËµ¥ÏêÇé  ########\n");
-		printf("######## 3. °´ÈÕÆÚ£¨ÈÕ£©²éÑ¯ÕËµ¥ÏêÇé  ########\n");
-		printf("######## 0. ·µ»ØÉÏ²ã²Ëµ¥              ########\n");
+		printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
+		printf("                     $                                              $\n");
+		printf("                     |                   ¸ù¾İÌõ¼ş²éÑ¯               |\n");
+		printf("                     |                                              |\n");
+		printf("                     |           1. °´ÈÕÆÚ£¨Äê£©²éÑ¯ÕËµ¥ÏêÇé        |\n");
+		printf("                     |           2. °´ÈÕÆÚ£¨ÔÂ£©²éÑ¯ÕËµ¥ÏêÇé        |\n");
+		printf("                     |           3. °´ÈÕÆÚ£¨ÈÕ£©²éÑ¯ÕËµ¥ÏêÇé        |\n");
+		printf("                     |           0. ·µ»ØÉÏ²ã²Ëµ¥                    |\n");
+		printf("                     $                                              $\n");
+        printf("                     $$¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª¡ª$$\n");
 }
 
-int baseManage(Consumption con[],int n)    	     /*¸Ãº¯ÊıÍê³É»ù±¾ĞÅÏ¢¹ÜÀí*/
-/*°´date½øĞĞ²åÈëÉ¾³ıĞŞ¸Ä£¬date²»ÄÜÖØ¸´*/
+int baseManage(Consumption con[],int n)    																/*¸Ãº¯ÊıÍê³É»ù±¾ĞÅÏ¢¹ÜÀí*/
+																										/*°´ÈÕÆÚ½øĞĞ²åÈëÉ¾³ıĞŞ¸Ä£¬ÈÕÆÚ²»ÄÜÖØ¸´*/
 {  
 	int choice,t, find[NUM];
     Consumption c;
 	do{   
-	menuBase( );                  /*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
-	printf("choose one operation you want to do:\n");
-		     scanf("%d",&choice);	          /*¶ÁÈëÑ¡Ïî*/
+	menuBase( );																						/*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
+	printf(" ÇëÊäÈëÏëÖ´ĞĞµÄ²Ëµ¥ÊıÄ¿:");
+		     scanf("%d",&choice);																		/*¶ÁÈëÑ¡Ïî*/
 		     switch(choice)
 		     {
-			   case 1:	readCon(&c,1);       /*¶ÁÈëÒ»Ìõ´ı²åÈëµÄdate¼ÇÂ¼*/
-						n=insertCon(con,n,c);   /*µ÷ÓÃº¯Êı²åÈëdate¼ÇÂ¼*/
+			   case 1:	readCon(&c,1);																	/*¶ÁÈëÒ»Ìõ´ı²åÈëµÄÏû·Ñ¼ÇÂ¼*/
+						n=insertCon(con,n,c);															/*µ÷ÓÃº¯Êı²åÈëÏû·Ñ¼ÇÂ¼*/
 					 break;
-			   case 2:  printf("Input the number deleted\n");
-					    scanf("%d%d%d",&c.date.year,&c.date.month,&c.date.day);  /*¶ÁÈëÒ»¸ö´ıÉ¾³ıµÄdateÑ§ºÅ*/
-					    n=deleteCon(con,n,c);   /*µ÷ÓÃº¯ÊıÉ¾³ıÖ¸¶¨dateµÄÏû·Ñ¼ÇÂ¼*/
+			   case 2:  printf(" ÇëÊäÈë´ıÉ¾³ıµÄÈÕÆÚ£¨year month day£©\n");
+					    scanf("%d%d%d",&c.date.year,&c.date.month,&c.date.day);							/*¶ÁÈëÒ»¸ö´ıÉ¾³ıµÄ¼ÇÂ¼*/
+					    n=deleteCon(con,n,c);															/*µ÷ÓÃº¯ÊıÉ¾³ıÖ¸¶¨ÈÕÆÚµÄÏû·Ñ¼ÇÂ¼*/
 					 break;
-			   case 3:  printf("Input the number modified\n");
-					    scanf("%d%d%d",&c.date.year,&c.date.month,&c.date.day);  /*¶ÁÈëÒ»¸ö´ıĞŞ¸ÄµÄdate*/
-						t=searchCon(con,n,c,3,find) ; /*µ÷ÓÃº¯Êı²éÕÒÖ¸¶¨dateµÄÏû·Ñ¼ÇÂ¼*/
-						 if (t)                 /*Èç¹û¸ÃÏû·ÑµÄ¼ÇÂ¼´æÔÚ*/
+			   case 3:  printf(" ÇëÊäÈë´ıĞŞ¸ÄµÄÈÕÆÚ£¨year month day£©\n");
+					    scanf("%d%d%d",&c.date.year,&c.date.month,&c.date.day);							/*¶ÁÈëÒ»¸ö´ıĞŞ¸ÄµÄ¼ÇÂ¼*/
+						t=searchCon(con,n,c,3,find) ;													/*µ÷ÓÃº¯Êı²éÕÒÖ¸¶¨ÈÕÆÚµÄÏû·Ñ¼ÇÂ¼*/
+						 if (t)																			/*Èç¹û¸ÃÏû·ÑµÄ¼ÇÂ¼´æÔÚ*/
 						{
-							readCon(&c,1);   /*¶ÁÈëÒ»ÌõÍêÕûµÄÏû·Ñ¼ÇÂ¼ĞÅÏ¢*/
-							con[t] = c;    /*½«¸Õ¶ÁÈëµÄ¼ÇÂ¼¸³Öµ¸øĞèÒªĞŞ¸ÄµÄÊı×é¼ÇÂ¼*/ 					 
+							readCon(&c,1);																/*¶ÁÈëÒ»ÌõÍêÕûµÄÏû·Ñ¼ÇÂ¼ĞÅÏ¢*/
+							con[find[0]] = c;															/*½«¸Õ¶ÁÈëµÄ¼ÇÂ¼¸³Öµ¸øĞèÒªĞŞ¸ÄµÄÊı×é¼ÇÂ¼*/ 					 
 						}					 
-						else                 /*Èç¹û¸ÃdateµÄ¼ÇÂ¼²»´æÔÚ*/ 
-						printf("this consumption is not in,can not be modified.\n"); /*Êä³öÌáÊ¾ĞÅÏ¢*/
+						else																			/*Èç¹û¸ÃdateµÄ¼ÇÂ¼²»´æÔÚ*/ 
+						printf(" ÊäÈëµÄÈÕÆÚ²»´æÔÚ£¬ÇëºË¶ÔºóÖØĞÂÊäÈë£¡\n");					/*Êä³öÌáÊ¾ĞÅÏ¢*/
 					 break;
 			   case 0: break;
 		    }
 	}while(choice);
-	return n;                             /*·µ»Øµ±Ç°²Ù×÷½áÊøºóµÄÊµ¼Ê¼ÇÂ¼ÌõÊı*/
+	return n;																							/*·µ»Øµ±Ç°²Ù×÷½áÊøºóµÄÊµ¼Ê¼ÇÂ¼ÌõÊı*/
 }
 
-void scoreManage(Consumption con[],int n)          /*¸Ãº¯ÊıÍê³ÉÏû·ÑĞÅÏ¢¹ÜÀí¹¦ÄÜ*/
+void scoreManage(Consumption con[],int n)																/*¸Ãº¯ÊıÍê³ÉÏû·ÑĞÅÏ¢¹ÜÀí¹¦ÄÜ*/
 {  
 	int choice;
 	do
 	{
-		menuScore( );                        /*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
-		printf("choose one operation you want to do:\n");
-		scanf("%d",&choice);	                 /*¶ÁÈë¶ş¼¶Ñ¡Ïî*/
+		menuScore( );																					/*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
+		printf(" ÇëÊäÈëÏëÖ´ĞĞµÄ²Ëµ¥ÊıÄ¿:");
+		scanf("%d",&choice);																			/*¶ÁÈë¶ş¼¶Ñ¡Ïî*/
 		switch(choice)
 		{
-			case 1:   calcuTotal(con,n);         /*ÇóËùÓĞÃ¿ÌìÏû·Ñ½ğ¶îµÄ×Ü¶î*/
+			case 1:   calcuTotal(con,n);																/*ÇóËùÓĞÃ¿ÌìÏû·Ñ½ğ¶îµÄ×Ü¶î*/
+					  printCon(con, n, 2);
 					  break;
-			case 2:   calcuRank(con,n);         /*¸ù¾İÃ¿ÌìÏû·Ñ½ğ¶îµÄ×Ü¶îÅÅÃû´Î*/
+			case 2:   calcuTotal(con,n);																/*ÇóËùÓĞÃ¿ÌìÏû·Ñ½ğ¶îµÄ×Ü¶î*/
+					  calcuRank(con,n);																	/*¸ù¾İÃ¿ÌìÏû·Ñ½ğ¶îµÄ×Ü¶îÅÅÃû´Î*/
+				      printCon(con, n, 3);
 				      break;		
 			case 0:   break;
 		}
 	}while(choice);
 }
 
-void countManage(Consumption con[],int n)               /*¸Ãº¯ÊıÍê³ÉÏû·ÑĞÅÏ¢Í³¼Æ¹¦ÄÜ*/
+void countManage(Consumption con[],int n)																/*¸Ãº¯ÊıÍê³ÉÏû·ÑĞÅÏ¢Í³¼Æ¹¦ÄÜ*/
 {
 		int choice,i,temp;
 		int find[NUM],f;
@@ -112,96 +149,105 @@ void countManage(Consumption con[],int n)               /*¸Ãº¯ÊıÍê³ÉÏû·ÑĞÅÏ¢Í³¼Æ
 		double spend = 0;
 		Consumption c;
 		sortCon(con, n);
+		calcuTotal(con, n);
 		do
 		{
-			menuCount( );                        /*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
-			printf("choose one operation you want to do:\n");
+			menuCount( );																				/*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
+			printf(" ÇëÊäÈëÏëÖ´ĞĞµÄ²Ëµ¥ÊıÄ¿:");
 			scanf("%d",&choice);
 			readDate(&c, 2);
 			f = searchCon(con, n, c,2,find);
-			switch(choice)
+			if (f)
 			{
-				case 1:	                                                                      /*ÊµÏÖÄ³ÄêÄ³ÔÂÏû·Ñ×Ü¶î¹¦ÄÜ*/
-						for (sum = 0,i = 0; i < f; i++)
-						{
-							sum += con[find[i]].total;
-							printCon(&con[i],1);
-						}
-						printf("Totail consumption of this month :\n");
-						printf("%ld",sum);
-				      break;
-				case 2:	 sum0 = sum1 = sum2 = sum3 = 0;                     					/*ÊµÏÖÄ³ÄêÄ³ÔÂÏîÄ¿Ïû·Ñ±ÈÀı¹¦ÄÜ*/
-						for (i = 0; i < f; i++)
-						{
-							temp = find[i];
-							sum0 += con[temp].fourObj[0];
-							sum1 += con[temp].fourObj[1];
-							sum2 += con[temp].fourObj[2];
-							sum3 += con[temp].fourObj[3];
-							printCon(&con[i],1);
-						}
-						printf("Catering,shopping,entertainment,trasportation accounted for the proportion totail:");
-						printf("%ld\t%ld\t%ld\t%ld\t\n",(sum0 / f),(sum1 / f),(sum2 / f),(sum3 / f));
-				      break;
-				 case 3:	                                       /*ÊµÏÖÄ³ÄêÄ³ÔÂ³¬³öÔ¤Ëã½ğ¶îÌìÊı¹¦ÄÜ*/
-						printf("please input the budget of this month:");
-						scanf("%ld",&spend);
-						for (i = 0,temp = 0; i < n; i++)
-						{
-							if (fabs(c.total - spend) > 0)
+				switch(choice)
+				{
+					case 1:	printHead();																/*ÊµÏÖÄ³ÄêÄ³ÔÂÏû·Ñ×Ü¶î¹¦ÄÜ*/
+							for (sum = 0,i = 0; i < f; i++)
 							{
-								temp++;
+								sum += con[find[i]].total;
+								printCon(&con[find[i]],1,4);
 							}
-						}
-						printf("The over budget days of this month:%d\n",temp);
-				      break;
-				  case 0:											/*·µ»ØÉÏ¼¶²Ëµ¥*/
-					  break;
+							printf(" %dÄê%dÔÂ¸÷ÏîÏû·Ñ×Ü½ğ¶îÎª : %.2f\n",c.date.year,c.date.month,sum);
+						  break;
+					case 2:	sum0 = sum1 = sum2 = sum3 = 0;                     							/*ÊµÏÖÄ³ÄêÄ³ÔÂÏîÄ¿Ïû·Ñ±ÈÀı¹¦ÄÜ*/
+							printHead(); 
+							for (i = 0; i < f; i++)
+							{
+								sum0 += con[find[i]].fourObj[0];
+								sum1 += con[find[i]].fourObj[1];
+								sum2 += con[find[i]].fourObj[2];
+								sum3 += con[find[i]].fourObj[3];
+								printCon(&con[find[i]],1,4);
+							}
+							for (sum = 0,i = 0; i < f; i++)
+							{
+								sum += con[find[i]].total;
+							}
+							printf("¸÷ÏîµÄ×Ü¶î      %.2f\t%.2f\t%.2f\t%.2f\t\n",sum0,sum1,sum2,sum3);
+							printf("¸÷ÏîÕ¼×Ü¶î      %.2f%%\t%.2f%%\t%.2f%%\t%.2f%%\t\n",(sum0 / sum * 100),(sum1 / sum * 100),(sum2 / sum * 100),(sum3 / sum * 100));
+						  break;
+					 case 3:																			/*ÊµÏÖÄ³ÄêÄ³ÔÂ³¬³öÔ¤Ëã½ğ¶îÌìÊı¹¦ÄÜ*/
+							printf(" ÇëÊäÈëÄãµÄÈÕÔ¤Ëã :");
+							scanf("%lf",&spend);
+							for (i = 0,temp = 0; i < f; i++)
+							{
+								if (con[find[i]].total - spend > 0.000001)
+								{
+									temp++;
+								}
+							}
+							printf(" %dÄê%dÔÂÖĞ³¬¹ıÔ¤ËãµÄÌìÊıÊÇ :%d\n",c.date.year,c.date.month,temp);
+						  break;
+					  case 0:																			/*·µ»ØÉÏ¼¶²Ëµ¥*/
+						  break;
+				}
 			}
+			else
+				printf("ÊäÈëµÄÈÕÆÚ²»´æÔÚ£¬ÇëºË¶ÔºóÖØĞÂÊäÈë£¡");
 		}while (choice);
 }
 
-void searchManage(Consumption con[],int n)               /*¸Ãº¯ÊıÍê³É¸ù¾İÌõ¼ş²éÑ¯¹¦ÄÜ*/
+void searchManage(Consumption con[],int n)																/*¸Ãº¯ÊıÍê³É¸ù¾İÌõ¼ş²éÑ¯¹¦ÄÜ*/
 {
     int i,choice,f,find[NUM];
 	Consumption c;
 	sortCon(con, n);
 	   do
 		{
-			menuSearch( );                         /*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
-			printf("choose one operation you want to do:\n");
+			menuSearch( );																				/*ÏÔÊ¾¶ÔÓ¦µÄ¶ş¼¶²Ëµ¥*/
+			printf(" ÇëÊäÈëÏëÖ´ĞĞµÄ²Ëµ¥ÊıÄ¿:");
 			scanf("%d",&choice);
-			readDate(&c,choice);                    /*ÊäÈëÈÕÆÚ²éÑ¯*/
-		 	if (choice>=1&&choice<=3)
+			readDate(&c,choice);																		/*ÊäÈëÈÕÆÚ²éÑ¯*/
+		 	if (choice>=1 && choice<=3)
 			{ 
-				f=searchCon(con,n,c,choice,find);    /*²éÕÒµÄ·ûºÏÌõ¼şÔªËØµÄÏÂ±ê´æÓÚfÊı×éÖĞ*/
-				if (f)				     /*Èç¹û²éÕÒ³É¹¦*/
+				f=searchCon(con,n,c,choice,find);														/*²éÕÒµÄ·ûºÏÌõ¼şÔªËØµÄÏÂ±ê´æÓÚfÊı×éÖĞ*/
+				if (f)																					/*Èç¹û²éÕÒ³É¹¦*/
 				{
-			   		printHead( );                  /*´òÓ¡±íÍ·*/
-					for (i=0;i<f;i++){}         /*Ñ­»·¿ØÖÆfÊı×éµÄÏÂ±ê*/
-	      			   printCon(&con[find[i]],1);      /*Ã¿´ÎÊä³öÒ»Ìõ¼ÇÂ¼*/
+			   		printHead( );																		/*´òÓ¡±íÍ·*/
+					for (i=0;i<f;i++)																	/*Ñ­»·¿ØÖÆfÊı×éµÄÏÂ±ê*/
+	      			   printCon(&con[find[i]], 1, 4);													/*Ã¿´ÎÊä³öÒ»Ìõ¼ÇÂ¼*/
 				}
 				else
-			    	printf("this record does not exist!\n"); /*Èç¹û²éÕÒ²»µ½ÔªËØ£¬ÔòÊä³öÌáÊ¾ĞÅÏ¢*/
+			    	printf(" ²éÑ¯ÈÕÆÚ²»´æÔÚ£¬ÇëºË¶ÔºóÖØĞÂÊäÈë!\n");										/*Èç¹û²éÕÒ²»µ½ÔªËØ£¬ÔòÊä³öÌáÊ¾ĞÅÏ¢*/
 		     }		
 	    }while (choice);
 }
 
-int runMain(Consumption con[],int n,int choice)    /*Ö÷¿ØÄ£¿é£¬¶ÔÓ¦ÓÚÒ»¼¶²Ëµ¥ÆäÏÂ¸÷¹¦ÄÜÑ¡ÔñÖ´ĞĞ*/
+int runMain(Consumption con[],int n,int choice)															/*Ö÷¿ØÄ£¿é£¬¶ÔÓ¦ÓÚÒ»¼¶²Ëµ¥ÆäÏÂ¸÷¹¦ÄÜÑ¡ÔñÖ´ĞĞ*/
 {
 		switch(choice)
 		{
-			case 1: printHead( );           /* 1. ÏÔÊ¾»ù±¾ĞÅÏ¢*/
-					sortCon(con,n);         /*°´dateÓÉĞ¡µ½´óµÄË³ĞòÅÅĞò¼ÇÂ¼*/ 
-          			printCon(con,n);          /*°´dateÓÉĞ¡µ½´óµÄË³ĞòÊä³öËùÓĞ¼ÇÂ¼*/
+			case 1:
+					sortCon(con,n);																		/*°´ÈÕÆÚÓÉĞ¡µ½´óµÄË³ĞòÅÅĞò¼ÇÂ¼*/ 
+          			printCon(con,n, 1);																	/*°´ÈÕÆÚÓÉĞ¡µ½´óµÄË³ĞòÊä³öËùÓĞ¼ÇÂ¼*/
 					break;
-			case 2: n=baseManage(con,n);    /* 2. »ù±¾ĞÅÏ¢¹ÜÀí*/
+			case 2: n=baseManage(con,n);																/* 2. »ù±¾ĞÅÏ¢¹ÜÀí*/
 			   	     break;
-			case 3: scoreManage(con,n);     /* 3. Ïû·ÑĞÅÏ¢¹ÜÀí*/
+			case 3: scoreManage(con,n);																	/* 3. Ïû·ÑĞÅÏ¢¹ÜÀí*/
 					break;
-			case 4: countManage(con,n);     /* 4. Ïû·ÑĞÅÏ¢Í³¼Æ*/
+			case 4: countManage(con,n);																	/* 4. Ïû·ÑĞÅÏ¢Í³¼Æ*/
 					break;
-			case 5: searchManage(con,n);     /* 5. ¸ù¾İÌõ¼ş²éÑ¯*/
+			case 5: searchManage(con,n);																/* 5. ¸ù¾İÌõ¼ş²éÑ¯*/
 				     break;
           case 0: break;
 		}
@@ -210,25 +256,27 @@ int runMain(Consumption con[],int n,int choice)    /*Ö÷¿ØÄ£¿é£¬¶ÔÓ¦ÓÚÒ»¼¶²Ëµ¥ÆäÏ
 
 int main( )
 {
-	Consumption con[NUM];        /*¶¨ÒåÊµ²ÎÒ»Î¬Êı×é´æ´¢Ïû·Ñ                                                                                                                                                 ¼ÇÂ¼*/
-    int choice,n = 0;
-	n=readFile(con);                  /*Ê×ÏÈ¶ÁÈ¡ÎÄ¼ş£¬¼ÇÂ¼ÌõÊı·µ»Ø¸³Öµ¸øn*/      
-	if (!n)                          /*Èç¹ûÔ­À´µÄÎÄ¼şÎª¿Õ*/
+	Consumption con[NUM];																				/*¶¨ÒåÊµ²ÎÒ»Î¬Êı×é´æ´¢Ïû·Ñ                                                                                                                                                 ¼ÇÂ¼*/
+    int choice,n;
+	system("color 2E");			                                                                        //½çÃæÑÕÉ«
+	system("title Ñ§ÉúÏû·Ñ¹ÜÀíÏµÍ³");
+	n=readFile(con);																					/*Ê×ÏÈ¶ÁÈ¡ÎÄ¼ş£¬¼ÇÂ¼ÌõÊı·µ»Ø¸³Öµ¸øn*/      
+	if (!n)																								/*Èç¹ûÔ­À´µÄÎÄ¼şÎª¿Õ*/
 	{
-		n=createFile(con);              /*ÔòÊ×ÏÈÒª½¨Á¢ÎÄ¼ş£¬´Ó¼üÅÌÉÏ¶ÁÈëÒ»ÏµÁĞ¼ÇÂ¼´æÓÚÎÄ¼ş*/       
+		n=createFile(con);																				/*ÔòÊ×ÏÈÒª½¨Á¢ÎÄ¼ş£¬´Ó¼üÅÌÉÏ¶ÁÈëÒ»ÏµÁĞ¼ÇÂ¼´æÓÚÎÄ¼ş*/       
 	}	 	 
 	do
 	{
-		menu();                      /*ÏÔÊ¾Ö÷²Ëµ¥*/
-	    printf("Please input your choice: ");
+		menu();																							/*ÏÔÊ¾Ö÷²Ëµ¥*/
+	    printf(" ÇëÊäÈëÏëÖ´ĞĞµÄ²Ëµ¥ÊıÄ¿: ");
 	    scanf("%d",&choice);
 	    if (choice >= 0 && choice <= 5)
-	         n=runMain(con,n,choice);    /*Í¨¹ıµ÷ÓÃ´Ëº¯Êı½øĞĞÒ»¼¶¹¦ÄÜÏîµÄÑ¡ÔñÖ´ĞĞ*/         
+	         n=runMain(con,n,choice);																	/*Í¨¹ıµ÷ÓÃ´Ëº¯Êı½øĞĞÒ»¼¶¹¦ÄÜÏîµÄÑ¡ÔñÖ´ĞĞ*/         
 	    else 
-		     printf("error input,please input your choice again!\n");
+		     printf(" ÊäÈë´íÎó£¬ÇëºË¶ÔºóÖØĞÂ´ÎÊäÈë!\n");
 	} while (choice);
-	sortCon(con,n);                   /*´æÈëÎÄ¼şÇ°°´dateÓÉĞ¡µ½´óÅÅĞò*/               
-	saveFile(con,n);                   /*½«½á¹û´æÈëÎÄ¼ş*/                        
+	sortCon(con,n);																						/*´æÈëÎÄ¼şÇ°°´dateÓÉĞ¡µ½´óÅÅĞò*/               
+	saveFile(con,n);																					/*½«½á¹û´æÈëÎÄ¼ş*/                        
     return 0;
 }
 
