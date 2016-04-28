@@ -21,6 +21,7 @@ int readCon(Consumption *con, int n)														/*读入消费结构体的各项值，记录
 		    scanf("%lf",&con[i].fourObj[j]);
 			//scanf("%s",&con[i].detail);	
 		}
+		con[i].total = 0;
 		con[i].rank=0;                                                                  /*排名需要根据总分来计算，初值置为0*/
 	}
 	return i;                                                                           /*返回实际读入的记录条数*/

@@ -2,7 +2,7 @@
 #ifndef _CONSUMPTION															/*条件编译，防止重复包含的错误*/
 #define _CONSUMPTION
 #include <string.h>
-#define NUM 5																	/*定义每月天数，此处可以根据实际需要修改常量值*/
+#define NUM 30																	/*定义每月天数，此处可以根据实际需要修改常量值*/
 struct Date																		/*日期的结构体，用于存储日期的年月日*/
 {
 	int year;
