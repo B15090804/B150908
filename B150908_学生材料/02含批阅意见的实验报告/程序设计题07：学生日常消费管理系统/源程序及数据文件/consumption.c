@@ -9,11 +9,11 @@ int readCon(Consumption *con, int n)														/*读入消费结构体的各项值，记录
 	{
 		printf(" 按以下提示输入一笔账单信息\n");                                        /*根据提示输入账单信息的年月日*/
 		printf(" 请输入日期\n");
-		printf(" 年:  ");
+		printf(" 年:\n");
 		scanf("%d", &con[i].date.year);
-		printf(" 月:  ");
+		printf(" 月:\n");
 		scanf("%d", &con[i].date.month);
-		printf(" 日:  ");
+		printf(" 日:\n");
 		scanf("%d", &con[i].date.day);
 		printf(" 请按顺序输入餐饮、娱乐、购物、交通费用详情 : ");                       /*根据提示输入账单信息四项具体花销*/
 		for (j=0; j<4; j++)
