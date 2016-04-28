@@ -33,7 +33,6 @@ void menuBase( )     /*2、基本信息管理菜单函数*/
 		printf("                     |                 基本信息管理                 |\n");
 		printf("                     |                                              |\n");
 		printf("                     |               1. 添加一笔账单                |\n");
-		printf("                     |               1. 添加一笔账单                |\n");
 		printf("                     |               2. 删除一笔账单                |\n");
 		printf("                     |               3. 修改一笔账单                |\n");
 		printf("                     |               0. 返回上层菜单                |\n");

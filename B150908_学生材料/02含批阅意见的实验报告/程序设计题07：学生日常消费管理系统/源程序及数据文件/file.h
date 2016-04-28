@@ -14,7 +14,7 @@ int createFile(Consumption con[])								/*½¨Á¢³õÊ¼µÄÊı¾İÎÄ¼ş*/
     }
 	printf(" ÇëÊäÈëÕËµ¥ĞÅÏ¢ :\n");
 	n=readCon(con,NUM);											/*µ÷ÓÃConsumption.hÖĞµÄº¯Êı¶ÁÊı¾İ*/
-	fprintf(fp,"ÈÕÆÚ	²ÍÒû	ÓéÀÖ	¹ºÎï	½»Í¨	×Ü¶î	ÅÅÃû\n");
+	fprintf(fp,"ÈÕÆÚ\t\t²ÍÒû\tÓéÀÖ\t¹ºÎï\t½»Í¨\t×Ü¶î\tÅÅÃû\n");
 	for (i=0; i<n; i++)											/*½«¸Õ²Å¶ÁÈëµÄËùÓĞ¼ÇÂ¼Ò»´ÎĞÔĞ´ÈëÎÄ¼ş*/
 			{
 				fprintf(fp,"%d/%d/%d\t",con[i].date.year,con[i].date.month,con[i].date.day);
@@ -38,7 +38,7 @@ int readFile(Consumption con[])									/*½«ÎÄ¼şÖĞµÄÄÚÈİ¶Á³öÖÃÓÚ½á¹¹ÌåÊı×écon[]Ö
 	    printf(" ÎÄ¼ş²»´æÔÚ£¬ÇëÖØĞÂ´´½¨:\n");					/*Èç¹û´ò¿ªÊ§°ÜÊä³öÌáÊ¾ĞÅÏ¢*/
 	    return 0;												/*È»ºó·µ»Ø0*/
 	}
-	fscanf(fp,"ÈÕÆÚ		²ÍÒû	ÓéÀÖ	¹ºÎï	½»Í¨	×Ü¶î	ÅÅÃû\n");
+	fscanf(fp,"ÈÕÆÚ\t\t²ÍÒû\tÓéÀÖ\t¹ºÎï\t½»Í¨\t×Ü¶î\tÅÅÃû\n");
 	fscanf(fp,"%d/%d/%d",&con[i].date.year,&con[i].date.month,&con[i].date.day);
 	fscanf(fp,"%lf%lf%lf%lf%lf%d",&con[i].fourObj[0],&con[i].fourObj[1],&con[i].fourObj[2],&con[i].fourObj[3],&con[i].total,&con[i].rank);
 	while(!feof(fp))											/*ÎÄ¼şÎ´½áÊøÊ±Ñ­»·*/
@@ -64,7 +64,7 @@ void saveFile(Consumption con[],int n)							/*½«½á¹¹ÌåÊı×écon[]µÄÄÚÈİĞ´ÈëÎÄ¼ş*/
 		printf(" ÎÄ¼ş´ò¿ªÊ§°Ü !\n");							/*Èç¹û´ò¿ªÊ§°Ü£¬Êä³öÌáÊ¾ĞÅÏ¢*/
 		exit(0);												/*È»ºóÍË³ö*/
 	}
-    fprintf(fp,"ÈÕÆÚ	²ÍÒû	ÓéÀÖ	¹ºÎï	½»Í¨	×Ü¶î	ÅÅÃû\n");
+    fprintf(fp,"ÈÕÆÚ\t\t²ÍÒû\tÓéÀÖ\t¹ºÎï\t½»Í¨\t×Ü¶î\tÅÅÃû\n");
 	for (i=0; i<n; i++)											/*½«¸Õ²Å¶ÁÈëµÄËùÓĞ¼ÇÂ¼Ò»´ÎĞÔĞ´ÈëÎÄ¼ş*/
 			{
 				fprintf(fp,"%d/%d/%d\t",con[i].date.year,con[i].date.month,con[i].date.day);
